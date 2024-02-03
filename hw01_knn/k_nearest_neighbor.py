@@ -1,10 +1,12 @@
 import numpy as np
+
 """
 Credits: the original code belongs to Stanford CS231n course assignment1. Source link: http://cs231n.github.io/assignments2019/assignment1/
 """
 
+
 class KNearestNeighbor:
-    """ a kNN classifier with L2 distance """
+    """a kNN classifier with L2 distance"""
 
     def __init__(self):
         pass
@@ -45,7 +47,7 @@ class KNearestNeighbor:
         elif num_loops == 2:
             dists = self.compute_distances_two_loops(X)
         else:
-            raise ValueError('Invalid value %d for num_loops' % num_loops)
+            raise ValueError("Invalid value %d for num_loops" % num_loops)
 
         return self.predict_labels(dists, k=k)
 
@@ -76,6 +78,8 @@ class KNearestNeighbor:
                 #####################################################################
                 # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
+                dists[i, j] = np.sum((self.X_train[j] - X[i]) ** 2)
+
                 # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
 
@@ -97,6 +101,8 @@ class KNearestNeighbor:
             # Do not use np.linalg.norm().                                        #
             #######################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+            dists[i, :] = np.sum((self.X_train - X[i, :]) ** 2, axis=1)
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
@@ -125,6 +131,10 @@ class KNearestNeighbor:
         #       and two broadcast sums.                                         #
         #########################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+        test_sum = np.sum(X**2, axis=1, keepdims=True)
+        train_sum = np.sum(self.X_train**2, axis=1)
+        dists = test_sum + train_sum.T - 2 * np.dot(X, self.X_train.T)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
@@ -156,6 +166,8 @@ class KNearestNeighbor:
             #########################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
+            closest_y = self.y_train[np.argsort(dists[i])[:k]]
+
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
             #########################################################################
             # TODO:                                                                 #
@@ -166,6 +178,7 @@ class KNearestNeighbor:
             #########################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
+            y_pred[i] = np.argmax(np.bincount(closest_y))
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
