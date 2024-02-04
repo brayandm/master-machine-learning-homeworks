@@ -105,11 +105,11 @@ class LossAndDerivatives:
         dimension as well, so you need to consider that fact in derivative implementation.
         """
 
-        n = X.shape[0]
-        predictions = X.dot(w)
-        difference = predictions - Y
-        gradients = np.where(difference != 0, np.sign(difference), 0)
-        return X.T.dot(gradients) / n
+        pred = X.dot(w)
+        errors = pred - Y
+        subgradient = X.T.dot(np.sign(errors)) / (X.shape[0] * Y.shape[1])
+
+        return subgradient
 
     @staticmethod
     def l2_reg_derivative(w):
