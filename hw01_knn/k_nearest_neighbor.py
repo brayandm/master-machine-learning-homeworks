@@ -81,7 +81,7 @@ class KNearestNeighbor:
                 dists[i, j] = np.sum((self.X_train[j] - X[i]) ** 2)
 
                 # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        return dists
+        return np.sqrt(dists)
 
     def compute_distances_one_loop(self, X):
         """
@@ -105,7 +105,7 @@ class KNearestNeighbor:
             dists[i, :] = np.sum((self.X_train - X[i, :]) ** 2, axis=1)
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        return dists
+        return np.sqrt(dists)
 
     def compute_distances_no_loops(self, X):
         """
@@ -137,7 +137,7 @@ class KNearestNeighbor:
         dists = test_sum + train_sum.T - 2 * np.dot(X, self.X_train.T)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        return dists
+        return np.sqrt(dists)
 
     def predict_labels(self, dists, k=1):
         """
