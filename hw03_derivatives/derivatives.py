@@ -85,7 +85,11 @@ class LossAndDerivatives:
 
         pred = X.dot(w)
         errors = pred - Y
-        gradient = 2 * X.T.dot(errors) / (X.shape[0] * Y.shape[1])
+        gradient = (
+            2
+            * X.T.dot(errors)
+            / (X.shape[0] * Y.shape[1] if len(Y.shape) > 1 else X.shape[0])
+        )
 
         return gradient
 
@@ -107,7 +111,9 @@ class LossAndDerivatives:
 
         pred = X.dot(w)
         errors = pred - Y
-        gradient = X.T.dot(np.sign(errors)) / (X.shape[0] * Y.shape[1])
+        gradient = X.T.dot(np.sign(errors)) / (
+            X.shape[0] * Y.shape[1] if len(Y.shape) > 1 else X.shape[0]
+        )
 
         return gradient
 
