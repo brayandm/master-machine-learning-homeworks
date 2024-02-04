@@ -83,8 +83,11 @@ class LossAndDerivatives:
         dimension as well, so you need to consider that fact in derivative implementation.
         """
 
-        n = X.shape[0]
-        return 2 / n * X.T.dot(X.dot(w) - Y)
+        pred = X.dot(w)
+        errors = pred - Y
+        gradient = 2 * X.T.dot(errors) / (X.shape[0] * Y.shape[1])
+
+        return gradient
 
     @staticmethod
     def mae_derivative(X, Y, w):
