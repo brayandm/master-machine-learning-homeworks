@@ -107,9 +107,9 @@ class LossAndDerivatives:
 
         pred = X.dot(w)
         errors = pred - Y
-        subgradient = X.T.dot(np.sign(errors)) / (X.shape[0] * Y.shape[1])
+        gradient = X.T.dot(np.sign(errors)) / (X.shape[0] * Y.shape[1])
 
-        return subgradient
+        return gradient
 
     @staticmethod
     def l2_reg_derivative(w):
