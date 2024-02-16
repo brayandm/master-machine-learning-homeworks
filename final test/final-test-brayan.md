@@ -18,7 +18,7 @@ Let's denote:
 
 #### Regression and classification problems:
 
-They are two types of supervised learning problems. In regression problems, the output variable is a continuous value, while in classification problems, the output variable is a discrete value.
+They are two types of supervised learning problems. In both cases, we have a training set $\{(x^{(i)}, y^{(i)})\}_{i=1}^{n}$ and a model $f(x)$ that predicts some value for every object. And we have a loss function $L(x, y, f)$ that should be minimized.
 
 #### Diference between regression and classification problems:
 
