@@ -16,6 +16,8 @@ Precision is the ratio of true positive predictions to the sum of true positive 
 
 ### 8. How are parameters different from hyperparameters? E.g. what are parameters in linear models and decision trees? Hyperparameters?
 
+Parameters are the values that a model learns from the data. They are the weights in a linear model and the split points in a decision tree. Hyperparameters are the values that are set before the model is trained. They are for example the learning rate in a linear model and the maximum depth in a decision tree, etc.
+
 ### 10. What is backpropagation? How does it work? E.g. how would gradient propagate through a linear layer? Through ReLU?
 
 ### 12. What is dropout? How does it work in a neural network? Does it change its behaviour on the inference (test) stage?
