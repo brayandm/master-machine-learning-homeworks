@@ -44,7 +44,8 @@ Parameters are the values that a model learns from the data. They are the weight
 
 Backpropagation is a technique used to calculate the gradients of the loss function with respect to the parameters of a model. It works by using the chain rule to calculate the gradients of the loss function with respect to the parameters of the model layer by layer. The gradients are then used to update the parameters of the model.
 
-To propagate the gradient through a linear layer, we would calculate the gradients of the loss function with respect to the weights and the biases of the layer. And for ReLU, we would calculate the gradients of the loss function with respect to the input of the ReLU function.
+To propagate the gradient through a linear layer, we would calculate the gradients of the loss function with respect to the weights and the biases of the layer. And for ReLU the
+gradient is 1 if the input is greater than 0 and 0 otherwise.
 
 ### 12. What is dropout? How does it work in a neural network? Does it change its behaviour on the inference (test) stage?
 
