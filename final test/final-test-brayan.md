@@ -20,6 +20,14 @@ Parameters are the values that a model learns from the data. They are the weight
 
 ### 10. What is backpropagation? How does it work? E.g. how would gradient propagate through a linear layer? Through ReLU?
 
+Backpropagation is a technique used to calculate the gradients of the loss function with respect to the parameters of a model. It works by using the chain rule to calculate the gradients of the loss function with respect to the parameters of the model layer by layer. The gradients are then used to update the parameters of the model.
+
+The gradient of a linear layer is the input to the layer transposed and multiplied by the gradient of the loss function with respect to the output of the layer.
+
 ### 12. What is dropout? How does it work in a neural network? Does it change its behaviour on the inference (test) stage?
 
+Dropout is a regularization technique used to prevent overfitting in neural networks. It works by randomly setting a fraction of the input units to 0 at each update during training. This forces the network to learn a more robust representation of the data. During the inference stage, the dropout is turned off and the weights are scaled by the dropout rate.
+
 ### 14. How does RNN work? Can you combine CNN and RNN somehow?
+
+RNN stands for Recurrent Neural Network. It is a type of neural network that is designed to work with sequences of data. It works by processing the input data one element at a time and maintaining a hidden state that captures information about the sequence. CNN and RNN can be combined by using the output of a CNN as the input to an RNN. This is useful when working with sequences of images.
