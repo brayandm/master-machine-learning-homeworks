@@ -1,4 +1,4 @@
-# Machine Learning for Masters Final Test Second Variant
+# Machine Learning for Masters Final Test - Second Variant
 
 ## Name: Brayan Duran Medina
 
