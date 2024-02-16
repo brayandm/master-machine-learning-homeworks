@@ -34,7 +34,7 @@ Validation is a technique used to evaluate the performance of a model. It is use
 
 ### 6. What are precision and recall metrics?
 
-Precision is the ratio of true positive predictions to the sum of true positive and false positive predictions. Recall is the ratio of true positive predictions to the sum of true positive and false negative predictions.
+The precision and recall metrics are used to evaluate the performance of a classification model. Precision is the ratio of true positive predictions to the sum of true positive and false positive predictions. Recall is the ratio of true positive predictions to the sum of true positive and false negative predictions.
 
 ### 8. How are parameters different from hyperparameters? E.g. what are parameters in linear models and decision trees? Hyperparameters?
 
