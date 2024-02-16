@@ -2,6 +2,24 @@
 
 ## Name: Brayan Duran Medina
 
+### Question for all students: Supervised learning problem statement. Regression and classification problems. What’s the difference?
+
+#### Supervised Supervised learning problem statement:
+
+Let's denote:
+
+-   Training set $\{(x^{(i)}, y^{(i)})\}_{i=1}^{n}$ ,where
+
+    -   $x^{(i)} \in \mathbb{R}^p, y^{(i)} \in \mathbb{R}$ for regression
+    -   $x^{(i)} \in \mathbb{R}^p, y^{(i)} \in \{C_1, \ldots, C_K\}$ for classification
+
+-   Model $f(x)$ predicts some value for every object
+-   Loss function $L(x, y, f)$ that should be minimized
+
+#### Diference between regression and classification problems:
+
+The main difference between regression and classification problems is the type of output variable that we are trying to predict. In regression problems, the output variable is a continuous value, while in classification problems, the output variable is a discrete value.
+
 ### 2. What is the gradient? How is it used in optimization?
 
 The gradient is a vector that points in the direction of the greatest increase of a function. It is used in optimization to find the minimum of a function. The gradient is used to update the parameters of a model in the direction of the greatest decrease of the loss function.
