@@ -22,7 +22,7 @@ They are two types of supervised learning problems. In both cases, we have a tra
 
 #### Diference between regression and classification problems:
 
-The main difference between regression and classification problems is the type of output variable that we are trying to predict. In regression problems, the output variable is a continuous value, while in classification problems, the output variable is a discrete value.
+The main difference between regression and classification problems is the type of output variable that we are trying to predict. In regression problems, the output variable is a continuous value, while in classification problems, the output variable is a discrete value that belongs to a set of classes.
 
 ### 2. What is the gradient? How is it used in optimization?
 
