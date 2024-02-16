@@ -4,15 +4,15 @@
 
 ### 2. What is the gradient? How is it used in optimization?
 
-The gradient of a function is a vector of its partial derivatives. It points in the direction of the greatest rate of increase of the function. In optimization, the gradient is used to find the minimum of the function. The idea is to move in the opposite direction of the gradient to reach the minimum.
+The gradient is a vector that points in the direction of the greatest increase of a function. It is used in optimization to find the minimum of a function. The gradient is used to update the parameters of a model in the direction of the greatest decrease of the loss function.
 
 ### 4. What is validation? Cross validation?
 
-Validation is a technique used to evaluate the performance of a model. It is done on a separate dataset from the training set. Cross validation is a technique used to evaluate the performance of a model when the dataset is small or when the model is sensitive to the training set. It is done by splitting the dataset into k parts and using each part as a validation set.
+Validation is a technique used to evaluate the performance of a model. It is used to estimate how well a model will perform on new data. Cross validation is a technique used to evaluate the performance of a model by splitting the data into k folds and training the model k times, each time using a different fold as the validation set.
 
 ### 6. What are precision and recall metrics?
 
-Precision and recall are metrics used to evaluate the performance of a classification model. Precision is the ratio of true positive to the sum of true positive and false positive. Recall is the ratio of true positive to the sum of true positive and false negative.
+Precision is the ratio of true positive predictions to the sum of true positive and false positive predictions. Recall is the ratio of true positive predictions to the sum of true positive and false negative predictions.
 
 ### 8. How are parameters different from hyperparameters? E.g. what are parameters in linear models and decision trees? Hyperparameters?
 
